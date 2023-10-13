@@ -8,7 +8,7 @@ Author: Marc M.
 */
 
 // Register a hook to display the product dimensions table under the short description.
-add_action('woocommerce_single_product_summary', 'wc_product_dimensions_table', 25);
+add_action( 'woocommerce_single_product_summary', 'wc_product_dimensions_table', 25 );
 add_action( 'woocommerce_single_product_summary', 'wc_product_dimensions_enqueue_style' );
 
 function wc_product_dimensions_enqueue_style() {
@@ -16,7 +16,8 @@ function wc_product_dimensions_enqueue_style() {
 }
 
 /**
- * Displays a WooCommerce Product's dimensions in a table under the short description of the product details page.
+ * Displays a WooCommerce Product's dimensions in a table under the short description of
+ * the product details page.
  *
  * @param WC_Product $product The product object.
  */
@@ -41,11 +42,11 @@ function wc_product_dimensions_table($product) {
     echo '</tr>';
     echo '<tr>';
     foreach ($dimensions as $dimension_name => $dimension_value) {
-      echo '<td>' . esc_html($dimension_value) . '</td>';
+      echo '<td>' . esc_html($dimension_value) . '"' . '</td>';
     }
   
     // Add a new table data cell for the weight column.
-    echo '<td>' . esc_html($weight) . '</td>';
+    echo '<td>' . esc_html($weight) . ' lbs' . '</td>';
     echo '</tr>';
     echo '</table>';
   }
