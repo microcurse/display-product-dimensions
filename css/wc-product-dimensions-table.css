@@ -19,7 +19,40 @@ h3.section-title {
   font-weight: bold;
   padding: 0 14px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: clamp( 1rem, 1.4vw, 1.4rem);
   letter-spacing: 1.2px;
   background: #efefef;
+}
+
+.woocommerce div.product div.summary {
+  padding: 4rem;
+}
+
+@media (max-width: 768px) {
+  .product_dimensions {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .product_dimensions th,
+  .product_dimensions td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+
+  .product_dimensions th {
+    background-color: #eee;
+    text-align: left;
+  }
+
+  /* Make the table display in two columns on mobile views */
+  .product_dimensions th,
+  .product_dimensions td {
+    display: table-cell;
+    float: none;
+  }
+
+  .woocommerce div.product div.summary {
+    padding: 1.4rem;
+  }
 }
