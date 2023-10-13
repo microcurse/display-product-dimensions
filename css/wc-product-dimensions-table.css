@@ -1,0 +1,25 @@
+h3.section-title {
+  font-size: 1.8rem;
+  margin: 8px 0;
+}
+
+.product_dimensions {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #efefef;
+}
+
+.product_dimensions th,
+.product_dimensions td {
+  border: 1px solid #ccc;
+  padding: 0 14px;
+}
+
+.product_dimensions th {
+  font-weight: bold;
+  padding: 0 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  background: #efefef;
+}
