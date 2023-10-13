@@ -37,16 +37,20 @@ function wc_product_dimensions_table($product) {
       echo '<th>' . esc_html($dimension_name) . '</th>';
     }
   
-    // Add a new table header for the weight column.
-    echo '<th>Weight</th>';
+    // If the product has weight, add a new table header for the weight column.
+    if ($weight) {
+      echo '<th>Weight</th>';
+    }
     echo '</tr>';
     echo '<tr>';
     foreach ($dimensions as $dimension_name => $dimension_value) {
       echo '<td>' . esc_html($dimension_value) . '"' . '</td>';
     }
   
-    // Add a new table data cell for the weight column.
-    echo '<td>' . esc_html($weight) . ' lbs' . '</td>';
+    // If the product has weight, add a new table data cell for the weight column.
+    if ($weight) {
+      echo '<td>' . esc_html($weight) . ' lbs' . '</td>';
+    }
     echo '</tr>';
     echo '</table>';
   }
