@@ -3,19 +3,19 @@ h3.section-title {
   margin: 8px 0;
 }
 
-.product_dimensions {
+.product_dimensions_summary {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #efefef;
 }
 
-.product_dimensions th,
-.product_dimensions td {
+.product_dimensions_summary th,
+.product_dimensions_summary td {
   border: 1px solid #ccc;
   padding: 0 14px;
 }
 
-.product_dimensions th {
+.product_dimensions_summary th {
   font-weight: bold;
   padding: 0 14px;
   text-transform: uppercase;
@@ -29,25 +29,25 @@ h3.section-title {
 }
 
 @media (max-width: 768px) {
-  .product_dimensions {
+  .product_dimensions_summary {
     width: 100%;
     border-collapse: collapse;
   }
 
-  .product_dimensions th,
-  .product_dimensions td {
+  .product_dimensions_summary th,
+  .product_dimensions_summary td {
     border: 1px solid #ccc;
     padding: 5px;
   }
 
-  .product_dimensions th {
+  .product_dimensions_summary th {
     background-color: #eee;
     text-align: left;
   }
 
   /* Make the table display in two columns on mobile views */
-  .product_dimensions th,
-  .product_dimensions td {
+  .product_dimensions_summary th,
+  .product_dimensions_summary td {
     display: table-cell;
     float: none;
   }

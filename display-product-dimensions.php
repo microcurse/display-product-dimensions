@@ -7,6 +7,9 @@ Version: 1.0.0
 Author: Marc M.
 */
 
+// Remove the default callback function for the "Additional Information" tab.
+remove_action('woocommerce_product_additional_information', 'woocommerce_display_product_attributes');
+
 // Register a hook to display the product dimensions table under the short description.
 add_action( 'woocommerce_single_product_summary', 'wc_product_dimensions_table', 25 );
 add_action( 'woocommerce_single_product_summary', 'wc_product_dimensions_enqueue_style' );
@@ -31,7 +34,7 @@ function wc_product_dimensions_table($product) {
   // If the product has dimensions, display them in a table.
   if ($dimensions) {
     echo '<h3 class="section-title">Overall Product Dimensions</h3>';
-    echo '<table class="product_dimensions">';
+    echo '<table class="product_dimensions_summary">';
     echo '<tr>';
     foreach ($dimensions as $dimension_name => $dimension_value) {
       echo '<th>' . esc_html($dimension_name) . '</th>';
