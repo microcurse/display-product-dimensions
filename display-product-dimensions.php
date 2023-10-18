@@ -2,6 +2,7 @@
 
 /**
  * Plugin Name: WooCommerce Product Dimensions Table
+ * Plugin URI: https://github.com/microcurse/display-product-dimensions
  * Description: Displays a WooCommerce Product's dimensions in a table under the short
  * description of the product details page.
  * Version: 1.0.0
