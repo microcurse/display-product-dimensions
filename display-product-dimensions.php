@@ -42,8 +42,16 @@ function wc_product_dimensions_table($product) {
 
     // Get the product dimensions.
     $formatted = false;
-    $dimensions = $product->get_dimensions($formatted);
+    // $dimensions = $product->get_dimensions($formatted);
     $weight = $product->get_weight();
+    $dimensions = $product->get_dimensions($formatted);
+
+    // Reorder the dimensions to 'width', 'length', 'height'
+    $reordered_dimensions = array(
+        'width' => $dimensions['width'],
+        'length' => $dimensions['length'],
+        'height' => $dimensions['height'],
+    );
 
     // Check if dimensions and weight are empty.
     $dimensions_empty = empty($dimensions);
@@ -51,9 +59,9 @@ function wc_product_dimensions_table($product) {
 
     // Check if the product is variable.
     if ($product->is_type('variable')) {
-        displayVariableProductTable($dimensions, $dimensions_empty, $weight, $weight_empty);
+        displayVariableProductTable($reordered_dimensions, $dimensions_empty, $weight, $weight_empty);
     } else {
-        displaySimpleProductTable($dimensions, $dimensions_empty, $weight, $weight_empty);
+        displaySimpleProductTable($reordered_dimensions, $dimensions_empty, $weight, $weight_empty);
     }
 }
 
